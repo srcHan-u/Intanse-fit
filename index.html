@@ -3,13 +3,138 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>IntanceFit</title>
   </head>
   <body class="body">
-    <header class="header"></header>
+    <header class="header">
+      <div class="container"></div>
+    </header>
     <main class="page">
-      <section class="page__section section"></section>
+      <section class="page__section section">
+        <div class="section__container container">
+          <div class="section__aside aside">
+            <nav class="aside__nav">
+              <ul class="aside__list">
+                <li class="aside__item">
+                  <a href="#" data-href="Counter" class="aside__link current"
+                    >Счётчик</a
+                  >
+                </li>
+                <li class="aside__item">
+                  <a href="#" data-href="Programm" class="aside__link"
+                    >Программа</a
+                  >
+                </li>
+                <li class="aside__item">
+                  <a href="#" data-href="Food" class="aside__link">Питание</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="section__programm programm" data-href="Programm">
+            <!-- <h1>Programm</h1> -->
+            <div class="programm__body">
+              <ul class="programm__list">
+                <li class="programm__item">
+                  <div class="programm__card card-programm">
+                    <h2 class="card-programm__day">Понедельник</h2>
+                    <ul class="card-programm__list">
+                      <li class="card-programm__item">1</li>
+                      <li class="card-programm__item card-programm__item_field">
+                        <input
+                          class="card-programm__field"
+                          type="text"
+                          name="field"
+                        />
+                        <button class="card-programm__button" type="button">
+                          +
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="programm__item">
+                  <div class="programm__card card-programm">
+                    <h2 class="card-programm__day">Вторник</h2>
+                    <ul class="card-programm__list">
+                      <li class="card-programm__item">1</li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="section__counter counter" data-href="Counter" hidden>
+            <div class="counter__number" id="countersField">0</div>
+            <div class="counter__buttons">
+              <button
+                class="counter__button counter__inc"
+                type="button"
+                id="buttonIncrement"
+              >
+                Подход
+              </button>
+              <button
+                class="counter__button counter__clear"
+                type="button"
+                id="buttonClear"
+              >
+                Очистить
+              </button>
+              <button
+                class="counter__button counter__rest"
+                type="button"
+                id="buttonRest"
+              >
+                Отдых
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="container"></div>
+    </footer>
+    <button class="button button-warning" type="button">Warning</button>
+    <button class="button button-info" type="button">Info</button>
+
+    <!-- backgrounds -->
+    <div class="background background_black"></div>
+    <!-- alert -->
+    <div class="alert alert_info">
+      <p class="alert__message">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+        perferendis, atque quos tenetur ipsa quisquam repellendus est molestias
+        facere velit libero fugiat molestiae, porro, pariatur earum nobis ipsam
+        quod sed?
+      </p>
+    </div>
+    <div class="alert alert_warning">
+      <p class="alert__message">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium
+        illum suscipit minus dolor? Provident, porro officia magni nulla
+      </p>
+    </div>
+    <div class="alert alert_info alert_timer">
+      <p class="alert__message text-color-white">Время отдыха</p>
+      <div class="alert__timer timer-alert">
+        <div class="timer-alert__time">30</div>
+        <button
+          class="timer-alert__button-stop"
+          id="buttonTimerStop"
+          type="button"
+        >
+          Стоп
+        </button>
+      </div>
+    </div>
+    <script src="./js/common.js" type="module"></script>
+    <script src="./js/help-functions.js" type="module"></script>
+    <script src="./js/navigation.js" type="module"></script>
+    <script src="./js/alert.js" type="module"></script>
+    <script src="./js/timer.js" type="module"></script>
+    <script src="./js/app.js" type="module"></script>
   </body>
 </html>

@@ -1,0 +1,268 @@
+$mainColorPurple: #3517b0;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style-type: none;
+}
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6{
+   padding: 0;
+   margin: 0;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  display: inline-block;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #000000;
+  position: relative;
+  //   line-height: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  //   background-color: blue;
+  min-height: 3rem;
+  box-shadow: 0px 0px 10px 0.1px rgba($color: #000000, $alpha: 1);
+  margin: 0 10px;
+}
+
+.page {
+  flex: 0 1 100%;
+  //   background-color: red;
+  &__section {
+  }
+}
+.section {
+  &__container {
+    //   height: 100%;
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    height: 100%;
+  }
+  &__counter {
+    padding: 3em 1em;
+    margin: 20px 20px auto 20px;
+    
+    //  display: flex;
+    //  justify-content: center;
+    //  align-items: center;
+   }
+   &__programm {
+   }
+}
+
+.counter {
+   box-shadow: 0px 0px 20px 10px rgba($color: #000000, $alpha: 0.2);
+   // display: inline-block;
+   text-align: center;
+  //   height: 200px;
+  &__number {
+    font-size: 2.5rem;
+    line-height: 100%;
+    &:not(:last-child) {
+      margin-bottom: 1.5em;
+    }
+  }
+
+  &__buttons {
+    // display: flex;
+    // justify-content: space-between;
+  }
+
+  &__button {
+    font-size: 1.2rem;
+    padding: 0.5em 1em;
+    background-color: rgba($color: $mainColorPurple, $alpha: 1);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 1px rgba($color: $mainColorPurple, $alpha: 0.5);
+  }
+  &__inc {
+  }
+
+  &__clear {
+  }
+
+  &__rest {
+    background-color: white;
+    color: $mainColorPurple;
+    border: 1px solid $mainColorPurple;
+    box-shadow: none;
+  }
+}
+
+.aside {
+  // height: 100%;
+  &__nav {
+  }
+
+  &__list {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-size: 2rem;
+    font-weight: 600;
+    //  line-height: 32 / 16 * 100%;
+    transition: 1s color ease-in-out;
+    &.current {
+      color: rgba($color: $mainColorPurple, $alpha: 0.8);
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer {
+  background-color: yellow;
+  min-height: 3rem;
+  box-shadow: 0px 0px 10px 0.1px rgba($color: #000000, $alpha: 1);
+  margin: 0 10px;
+}
+
+// alert
+
+.alert {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  // width: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  padding: 1em;
+  line-height: 120%;
+  text-align: center;
+  border-radius: 10px;
+  transition: top 1s ease-in-out, opacity 1s ease-in-out;
+  z-index: 11;
+  opacity: 0;
+  &.active {
+    top: 25%;
+    opacity: 1;
+  }
+  // border: 1px solid rgba($color: #000000, $alpha: 1.0);
+  &_info {
+    background-color: rgba($color: paleturquoise, $alpha: 0.8);
+    // color: paleturquoise;
+  }
+
+  &_warning {
+    background-color: rgba($color: red, $alpha: 0.8);
+  }
+  &_timer {
+  }
+
+  &__timer {
+  }
+  &__message {
+  }
+}
+.timer-alert {
+  // display: flex;
+
+  &__time {
+    border-radius: 50%;
+    // background-color: yellow;
+    border: 0.1em solid white;
+    padding: 4rem;
+    font-size: 3rem;
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+  &__button-stop {
+    border: 1px solid $mainColorPurple;
+    box-shadow: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    padding: 0.5em 1em;
+    background-color: rgba($color: $mainColorPurple, $alpha: 1);
+    color: white;
+  }
+}
+//
+.background {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  &.active {
+    display: block;
+  }
+  &_black {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+  }
+}
+
+// module
+
+.text-color-white {
+  color: white;
+}
+
+
+.programm {
+
+   &__body {
+   }
+
+   &__list {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+   }
+
+   &__item {
+      flex: 0 1 50%;
+   }
+
+   &__card {
+   }
+}
+.card-programm {
+   border: 1px solid black;
+   &__day {
+      font-size: 1.3rem;
+      &:not(:last-child){
+         margin-bottom: 1rem;
+      }
+   }
+
+   &__list {
+   }
+
+   &__item {
+      &_field{}
+   }
+   &__field{}
+   &__button{}
+}
