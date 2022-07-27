@@ -20,21 +20,6 @@ export function isClass(arr, _class) {
   }
 }
 
-// export function isArray(o) {
-//   if (
-//     o &&
-//     typeof 0 === "object" &&
-//     Number.isFinite(o.length) &&
-//     o.length >= 0 &&
-//     Number.isInteger(o.length) &&
-//     o.length < 4294967295
-//   ) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-
 export const { log } = console;
 
 export function isArrayLike(о) {
