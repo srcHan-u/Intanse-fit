@@ -15,16 +15,19 @@ let counter = 0;
 let flag = false;
 
 function clear() {
+   
   counter = 0;
 }
 
 function increment() {
+
   counter++;
 }
 
 
 
 function isLittle() {
+
   if (counter <= 1) {
     return true;
   }
@@ -33,11 +36,13 @@ function isLittle() {
 
 
 btnIncrementNode.addEventListener("click", () => {
+
    increment();
    render(countersFieldNode, counter);
  });
 
  btnRestNode.addEventListener("click", () => {
+
    flag = true;
    setClass(backGroundBlack, "active");
    setClass(isClass(alertInfoNode, "alert_timer"), "active");
@@ -45,6 +50,7 @@ btnIncrementNode.addEventListener("click", () => {
  });
 
  btnClearNode.addEventListener("click", () => {
+
    if (isLittle()) {
      alert("Мало подходов");
    } else {
@@ -55,14 +61,12 @@ btnIncrementNode.addEventListener("click", () => {
  
  
  btnTimerStopeNode.addEventListener("click", () => {
+
    flag = false;
-   removeClass(backGroundBlack, "active");
-   removeClass(isClass(alertsNode, "active"), "active");
-   //   timer = null;
  });
  
  backGroundBlack.addEventListener("click", () => {
-   // console.log()
+   
    if (!(isClass(alertsNode, "active") === isClass(alertsNode, "alert_timer"))) {
      removeClass(backGroundBlack, "active");
      removeClass(isClass(alertsNode, "active"), "active");
@@ -70,6 +74,7 @@ btnIncrementNode.addEventListener("click", () => {
  });
 
  function timer() {
+
    let generalTime = 31;
    const interval = setInterval(timerCount, 1000);
    function timerCount() {

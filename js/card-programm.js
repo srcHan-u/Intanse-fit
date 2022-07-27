@@ -20,6 +20,7 @@ function f(field, list) {
    
 }
 // todo fd i have to refactor all this code bellow
+// todo fd make it safer
 a.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();

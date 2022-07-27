@@ -29,21 +29,26 @@
                 <li class="aside__item">
                   <a href="#" data-href="Food" class="aside__link">Питание</a>
                 </li>
+                <li class="aside__item">
+                  <a href="#" data-href="Calendar" class="aside__link"
+                    >Календарь</a
+                  >
+                </li>
               </ul>
             </nav>
           </div>
-          <div class="section__programm programm" data-href="Programm">
+          <div class="section__programm programm" data-href="Programm" hidden>
             <!-- <h1>Programm</h1> -->
             <div class="programm__body">
               <ul class="programm__list">
                 <li class="programm__item">
                   <div class="programm__card card-programm">
                     <h2 class="card-programm__day">Понедельник</h2>
-                    <ul class="card-programm__list" data-id="1">
-                      <li class="card-programm__item">1</li>
-                      <li class="card-programm__item">1</li>
-                      <li class="card-programm__item">1</li>
-                    </ul>
+                    <ol class="card-programm__list" data-id="1" type="1">
+                      <li class="card-programm__item"></li>
+                      <li class="card-programm__item"></li>
+                      <li class="card-programm__item"></li>
+                    </ol>
                     <div class="card-programm__controll controll-card">
                       <input
                         class="controll-card__field"
@@ -78,7 +83,7 @@
               </ul>
             </div>
           </div>
-          <div class="section__counter counter" data-href="Counter" hidden>
+          <div class="section__counter counter" data-href="Counter">
             <div class="counter__number" id="countersField">0</div>
             <div class="counter__buttons">
               <button
@@ -103,6 +108,12 @@
                 Отдых
               </button>
             </div>
+          </div>
+          <div class="calendar" data-href="Calendar" hidden>
+            <h2>Calendar</h2>
+          </div>
+          <div class="food" data-href="Food" hidden>
+            <h2>Food</h2>
           </div>
         </div>
       </section>
